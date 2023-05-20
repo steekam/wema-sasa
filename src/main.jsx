@@ -6,8 +6,9 @@ import "./index.css";
 import Login from "./components/Login/Login.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import AuthenticatedRoutes from "./layouts/AuthenticatedRoutes.jsx";
-import Dashboard from "./components/Dashboard/Dashboard.jsx";
+import Dashboard, {loader as dashboardLoader} from "./components/Dashboard/Dashboard.jsx";
 import TeamPage from "./components/TeamPage/TeamPage.jsx";
+import { setupHealthCloudAccessToken } from "./api/index.js";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
+        loader: dashboardLoader,
         element: <Dashboard />,
       },
       {
@@ -36,6 +38,8 @@ const router = createBrowserRouter([
     ],
   }
 ]);
+
+setupHealthCloudAccessToken();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
