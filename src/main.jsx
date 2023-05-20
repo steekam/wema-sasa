@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <Onboard />,
   },
   {
     path: "/signup",
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/team",
+        path: "/member-details",
         element: <TeamPage />,
       },
     ],
@@ -44,6 +44,7 @@ const router = createBrowserRouter([
 ]);
 
 setupHealthCloudAccessToken();
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

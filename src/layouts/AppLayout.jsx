@@ -13,11 +13,11 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
-  { name: 'Team', href: '/team', icon: UsersIcon, current: false },
+  { name: 'Member Details', href: '/member-details', icon: UsersIcon, current: false },
 ]
 
 const userNavigation = [
-  { name: 'Your profile', href: '#' },
+  { name: 'Login', href: '/login' },
   { name: 'Sign out', href: '#' },
 ]
 
@@ -223,8 +223,8 @@ const AppLayout = ({children}) => {
             </div>
           </div>
 
-          <main className="py-10">
-            <div className="px-4 sm:px-6 lg:px-8">
+          <main className="py-10 bg-gray-50">
+            <div className="px-4 sm:px-6 lg:px-8 max-w-7xl">
               {children}
             </div>
           </main>
