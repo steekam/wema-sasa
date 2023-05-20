@@ -1,16 +1,26 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function index() {
+export default function Onboarding() {
 
-    let [email, setEmail] = useState('') 
-    let [password, setPassword] = useState('')
+    let [memberNumber, setMemberNumber] = useState('') 
+    let [provider, setProvider] = useState(null)
+    let navigate = useNavigate()
+
+    let handleVerifyMember = async (number, provider) => {
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
 
     return (
         <>
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                Sign in to your account
+                Onboarding details
                 </h2>
             </div>
 
@@ -18,42 +28,34 @@ export default function index() {
                 <form className="space-y-6" action="#" method="POST">
                 <div>
                     <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                    Email address
+                    Member Number
                     </label>
                     <div className="mt-2">
                     <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
+                        id="member"
+                        name="member"
+                        type="text"
+                        // autoComplete="email"
                         required
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
+                        value={memberNumber}
+                        onChange={e => setMemberNumber(e.target.value)}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                     </div>
                 </div>
 
                 <div>
-                    <div className="flex items-center justify-between">
-                    <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                        Password
+                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                    Insurance Provider
                     </label>
-                    <div className="text-sm">
-                        <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                        Forgot password?
-                        </a>
-                    </div>
-                    </div>
                     <div className="mt-2">
                     <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        autoComplete="current-password"
+                        id="provider"
+                        name="provider"
+                        type="text"
                         required
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        value={provider}
+                        onChange={e => setProvider(e.target.value)}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                     </div>
@@ -63,9 +65,9 @@ export default function index() {
                     <button
                         type="submit"
                         className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        onClick={() => console.log('Logged in ')}
+                        onClick={() => setIsLoggedIn(true)}
                     >
-                    Sign in
+                    Verify
                     </button>
                 </div>
                 </form>
