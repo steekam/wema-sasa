@@ -7,6 +7,7 @@ import Login from "./components/Login/Login.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import AuthenticatedRoutes from "./layouts/AuthenticatedRoutes.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
+import TeamPage from "./components/TeamPage/TeamPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/team",
+        element: <TeamPage />,
       },
     ],
   }
