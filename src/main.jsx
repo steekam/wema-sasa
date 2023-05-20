@@ -6,7 +6,7 @@ import "./index.css";
 import Login from "./components/Login/Login.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import AuthenticatedRoutes from "./layouts/AuthenticatedRoutes.jsx";
-import Dashboard, {loader as dashboardLoader} from "./components/Dashboard/Dashboard.jsx";
+import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import TeamPage from "./components/TeamPage/TeamPage.jsx";
 import { setupHealthCloudAccessToken } from "./api/index.js";
 import Onboard from "./components/Onboarding/Onboarding.jsx";
@@ -33,7 +33,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        loader: dashboardLoader,
         element: <Dashboard />,
       },
       {
