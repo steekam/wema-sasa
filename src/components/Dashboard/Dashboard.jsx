@@ -1,8 +1,7 @@
-const Dashboard = () => {
-
-    return <>
-        Welcome to you dashboard
+export default function Dashboard() {
+  return (
+    <>
+      <h1 className="text-2xl">Dashboard</h1>
     </>
-};
-
-export default Dashboard;
+  );
+}
