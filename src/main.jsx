@@ -8,6 +8,7 @@ import Signup from "./components/Signup/Signup.jsx";
 import AuthenticatedRoutes from "./layouts/AuthenticatedRoutes.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import TeamPage from "./components/TeamPage/TeamPage.jsx";
+import Onboard from "./components/Onboarding/Onboarding.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/onboard",
+    element: <Onboard />,
   },
   {
     element: <AuthenticatedRoutes/>,
